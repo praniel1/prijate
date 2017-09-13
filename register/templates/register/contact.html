@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Contact</title>
+<link rel="Screenshot_45_" href="C:\Users\User1\Desktop\Screenshot_45_.ico" />
+<meta charset="utf-8">
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'register/css/reset.css' %}" type="text/css" media="all"/>
+<link rel="stylesheet" href="{% static 'register/css/layout.css' %}" type="text/css" media="all"/>
+<link rel="stylesheet" href="{% static 'register/css/style.css' %}" type="text/css" media="all"/>
+<script type="text/javascript" src="{% static 'register/js/jquery-1.6.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_700.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_300.font.js' %}"></script>
+	<script type="text/javascript" src="{% static 'register/js/atooltip.jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/script.js' %}"></script>
+
+</head>
+<body id="page5">
+<div class="body1">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+			
+				<nav>
+					<ul id="top_nav">
+						<li><a href="index.html"><img src="images/top_icon1.gif" alt=""></a></li>
+						<li><a href="#"><img src="images/top_icon2.gif" alt=""></a></li>
+						<li class="end"><a href="Contact.html"><img src="images/top_icon3.gif" alt=""></a></li>
+					</ul>
+				</nav>
+				<nav>
+					<ul id="menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="index2.html">Register</a></li>
+						<li><a href="#">Portal</a></li>
+						<li id="menu_active"><a href="Contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header><div class="ic">More Website Templates  &copy; TemplateMonster.com - July 18th 2011!</div>
+<!-- / header -->
+<!-- content -->
+		<article id="content">
+			<div class="wrapper">
+				<div class="box1">
+					<div class="line1 wrapper">
+						<section class="col1">
+							<h2><strong>O</strong>ur<span>Address</span></h2>
+							<strong class="address">
+								Country:<br>
+								City:<br>
+								E-mail:
+							</strong>
+							India<br>
+							Bangalore<br>
+					<a href="mailto:">Annetjohn.john@gmail.com</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href="mailto:">vmohanshilpa1996@gmail.com</a>
+						</section>
+						<section class="col2 pad_left1">
+							<h2 class="color2"><strong>A</strong>bout<span>Website</span></h2>
+							<p class="pad_bot1">
+								This brief overview highlights some of the key barriers faced by disabled and orphan children in
+our society, and we face them in our day-to- day lives which impacts on their progression into
+adulthood. To overcome such barriers any person using our website can suggest NGO&#39;s to
+handle the child, to adopt and nourish them with good care in terms of health and education. And
+as an option even the person is provided with the facility to have a constant check with the
+child’s progress.
+The focus of this website mainly addresses these barriers within the context of four key areas:
+Education, health, safety and shelter.
+							</p>
+							Overall, this website creates awareness among students, adults, teenager or any other prospect of
+age to hold the importance of a child&#39;s future. And save them from any other means of wreck
+affecting their day-to- day living, replacing with a better life changes they can make for
+themselves..
+						</section>
+					</div>
+				</div>	
+			</div>
+			<div class="wrapper">
+				<div class="pad_left2 relative">
+					<h4 class="color3"><span>Contact</span>Form</h4>
+					<img src="C:\Users\User1\Desktop\contact-image.png"height="200px"alt="" class="img1">
+					<form id="ContactForm">
+						<div>
+							<div class="wrapper"><span>Your Name:</span><input type="text" class="input"></div>
+							<div class="wrapper"><span>Your E-mail:</span><input type="text" class="input"></div>
+						
+							<div class="textarea_box"><span>Your Message:</span><textarea name="textarea" cols="1" rows="1"></textarea></div>
+							<a href="#" class="button2 color3" onClick="document.getElementById('ContactForm').submit()">Send</a>
+							<a href="#" class="button2 color3" onClick="document.getElementById('ContactForm').reset()">Clear</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</article>
+<!-- / content -->
+<!-- footer -->
+		<footer>
+			<div class="wrapper">
+				<a href="index.html" id="footer_logo"><span>Pri</span>Jatie</a>
+				<ul id="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.gif" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.gif" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon3.gif" alt=""></a></li>
+				</ul>
+			</div>	
+			<div class="wrapper">
+				<nav>
+					<ul id="footer_menu">
+						<li><a href="{% url 'register:index' %}">Home</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Register</a></li>
+						<li><a href="#">Portal</a></li>
+						<li class="end active"><a href="{% url 'register:contact' %}">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="tel"><span>+91<span>7760562281</div>
+			</div>
+			
+		</footer>
+<!-- / footer -->
+	</div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+</body>
+</html>

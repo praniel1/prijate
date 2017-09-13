@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="\Screenshot_45_.ico" />
+<meta charset="utf-8">
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'register/css/reset.css' %}" type="text/css" media="all"/>
+<link rel="stylesheet" href="{% static 'register/css/layout.css' %}" type="text/css" media="all"/>
+<link rel="stylesheet" href="{% static 'register/css/style.css' %}" type="text/css" media="all"/>
+<script type="text/javascript" src="{% static 'register/js/jquery-1.6.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_700.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_300.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/jquery.easing.1.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/tms-0.3.js' %} "></script>
+<script type="text/javascript" src="{% static 'register/js/tms_presets.js' %} "></script>
+<script type="text/javascript" src="{% static 'register/js/backgroundPosition.js' %} "></script>
+<script type="text/javascript" src="{% static 'register/js/atooltip.jquery.js' %} "></script>
+<script type="text/javascript" src="{% static 'register/js/script.js' %}"></script>
+
+</head>
+<body  bgcolor="#FFFFFF">
+<div class="body1">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+				<h1></a></h1>
+				<nav>
+					<ul id="top_nav">
+						<li><a href="{% url 'register:index' %}"><img src="{% static 'register/images/top_icon1.gif' %}" alt=""></a></li>
+						<li><a href="#"><img src="{% static 'register/images/top_icon2.gif' %}" alt=""></a></li>
+						<li class="end"><a href="Contact.html"><img src="{% static 'register/images/top_icon3.gif'%}" alt=""></a></li>
+						<li class="end"><a href="index2.html" > &nbsp; &nbsp; &nbsp;
+					<strong> Login/SignUP </strong></a></li>
+					</ul>
+				</nav>
+				<nav>
+					<ul id="menu">
+						<li id="menu_active"><a href="{% url 'register:index' %}">Home</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="{% url 'register:index3' %}">Register</a></li>
+					    <li><a href="#">Portal</a></li>
+						<li><a href="{% url 'register:contact' %}">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="slider">
+				<ul class="items">
+					<li>
+						<img src="http://www.2classnotes.com/wp-content/uploads/2016/04/Children-from-Nardan-Basti-on-Mehrauli-Badarpur-Road-at-a-Matri-Sudha-centre.jpg" alt="">
+						<div class="banner">
+							<div class="wrapper"><span><em>Help</em></span></div>
+							<div class="wrapper"><strong>Those Who<em>Need</em>It”</strong></div>
+						</div>
+					</li>
+					<li>
+						<img src="https://s-media-cache-ak0.pinimg.com/originals/15/fd/0c/15fd0c4366e8bca0821e8f81cfe1983c.jpg" alt="">
+						<div class="banner">
+							<div class="wrapper"><span>“MAKE all the CHILDREN</span></div>
+							<div class="wrapper"><strong>Smile”</strong></div>
+						</div>
+					</li>
+					<li>
+						<img src="https://performancemarks.files.wordpress.com/2013/09/origin_9140556495.jpg?w=652&h=435" alt="">
+						<div class="banner">
+							<div class="wrapper"><span>“TOGETHER we can CHANGE</span></div>
+							<div class="wrapper"><strong>Many Young LIVES”</strong></div>
+						</div>
+					</li>
+				</ul>
+				<ul class="pagination">
+					<li id="banner1"><a href="#">CHECK <span>Their Report</span></a></li>
+					<li id="banner2"><a href="#">Join<span>Them Here</span></a></li>
+					<li id="banner3"><a href="#">Help<span>children</span></a></li>
+				</ul>
+			</div>
+<!-- / header -->
+<!-- content -->
+		
+				
+		
+			
+<!-- / content -->
+	<br/><br/>			<br/>	<br/><br/>			<br/>
+<!-- footer -->
+		<footer>
+			<div class="wrapper">
+				<a href="index.html" id="footer_logo"><span>Prijatie</span></a>
+				<ul id="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.gif" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.gif" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon3.gif" alt=""></a></li>
+				</ul>
+			</div>	
+		
+
+
+			<div class="wrapper">
+				<nav>
+					<ul id="footer_menu">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="Mission.html">Progress</a></li>
+						<li><a href="News.html">Register</a></li>
+						<li><a href="Help.html">Portal</a></li>
+						<li class="end"><a href="Contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="tel"><span>+91</span>7760562281</div>
+			</div>
+		
+		</footer>
+<!-- / footer -->
+	</div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+<script>
+$(window).load(function(){
+	$('.slider')._TMS({
+		preset:'zabor',
+		easing:'easeOutQuad',
+		duration:800,
+		pagination:true,
+		banners:true,
+		waitBannerAnimation:false,
+		slideshow:6000,
+		bannerShow:function(banner){
+			banner
+				.css({right:'-700px'})
+				.stop()
+				.animate({right:'0'},600, 'easeOutExpo')
+		},
+		bannerHide:function(banner){
+			banner
+				.stop()
+				.animate({right:'-700'},600,'easeOutExpo')
+		}
+	})
+	$('.pagination li').hover(function(){
+		if (!$(this).hasClass('current')) {
+			$(this).find('a').stop().animate({backgroundPosition:'0 0'},600,'easeOutExpo', function(){$(this).parent().css({backgroundPosition:'-20px 0'})});
+		}
+	},function(){
+		if (!$(this).hasClass('current')) {
+			$(this).css({backgroundPosition:'0 0'}).find('a').stop().animate({backgroundPosition:'-250px 0'},600,'easeOutExpo');
+		}
+	})
+})
+</script>
+</body>
+</html>
