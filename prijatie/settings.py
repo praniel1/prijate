@@ -25,7 +25,7 @@ SECRET_KEY = '=ln!g1)hji88d%%ec6k*d)58y*d6*5(uk@6gwo58%ds51%6)83'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['prijatie.herokuapp.com']
 
 
 # Application definition
@@ -69,6 +69,7 @@ TEMPLATES = [
     },
 ]
 
+# AUTH_PROFILE_MODULE = 'dash.UserProfile'
 WSGI_APPLICATION = 'prijatie.wsgi.application'
 
 
@@ -120,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_PROFILE_MODULE = 'dash.UserProfile'

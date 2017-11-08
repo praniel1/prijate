@@ -5,6 +5,7 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
+		{% load staticfiles %}
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
         <title>USer's Login/SignUp</title>
@@ -12,27 +13,27 @@
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
         <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style2.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+        <link rel="shortcut icon" href="{% static '../favicon.ico' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'register/css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'register/css/style2.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'register/css/animate-custom.css' %}" />
 		<link rel="icon" type="image/x-icon" href="\Screenshot_45_.ico" />
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<script type="text/javascript" src="js/jquery-1.6.js"></script>
-<script type="text/javascript" src="js/cufon-yui.js"></script>
-<script type="text/javascript" src="js/cufon-replace.js"></script> 
-<script type="text/javascript" src="js/Vegur_700.font.js"></script>
-<script type="text/javascript" src="js/Vegur_400.font.js"></script>
-<script type="text/javascript" src="js/Vegur_300.font.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/tms-0.3.js"></script>
-<script type="text/javascript" src="js/tms_presets.js"></script>
-<script type="text/javascript" src="js/backgroundPosition.js"></script>
-<script type="text/javascript" src="js/atooltip.jquery.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<link rel="stylesheet" href="{% static 'register/css/reset.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="[% static 'register/css/layout.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'register/css/style.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'register/js/jquery-1.6.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_700.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/Vegur_300.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/jquery.easing.1.3.js.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/tms-0.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/tms_presets.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/backgroundPosition.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/atooltip.jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'register/js/script.js' %}"></script>
 <style type="text/css">
 
 
@@ -61,11 +62,11 @@
 				</nav>
 				<nav>
 					<ul id="menu">
-						<li id="menu_active"><a href="index.html">Home</a></li>
+						<li><a href="{% url 'register:index' %}">Home</a></li>
 						<li><a href="#">Progress</a></li>
-						<li><a href="index2.html">Register</a></li>
+						<li id="menu_active"><a href="{% url 'register:index2' %}">Register</a></li>
 					    <li><a href="#">Portal</a></li>
-					<li><a href="Contact.html">Contact</a></li>
+					<li><a href="{% url 'register:contact' %}">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -81,7 +82,7 @@
 				<nav class="codrops-demos">
 					<span>Click <strong>"Join us"</strong>here</span>
 				
-					<a href="index2.html" class="current-demo">User</a>
+					<a href="index2.html" class="current-demo">Organization</a>
 					<a href="index3.html">Client</a>
 				</nav>
             </header>
@@ -92,7 +93,8 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form action="org_login" method="post">
+                                {% csrf_token %}
                                 <h1>Log in</h1> 
                                 <p align="left">
 								&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
@@ -118,38 +120,21 @@
                         </div>
 
                         <div id="register" class="animate form" style="padding-top: 20px;">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form  action="org_register" method="post">
+                                {% csrf_token %}
                                 <h1> Sign up </h1> 
                                 <p> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  
                                     <label for="usernamesignup" class="uname" >
 									 Firsusername</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Firstname690" data-icon="u"/>
-                                </p>
-								<p> <label for="usernamesignup" class="uname" >
-									Lastname</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Lastname690" data-icon="u"/>
-                                </p>
-									<p> <label for="usernamesignup" class="uname" >
-									Mobile Number</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="000000000" data-icon="u"/>
-                                </p>
-								<p> <label for="usernamesignup" class="uname" >
-								Preferred NGO's</label>
-                                   <select>
-								   <option >X</option>
-								     <option >X</option>
-									   <option >X</option> 
-									   <option >X</option>
-									     <option >X</option>  <option >X</option>
-								   </select>
+                                    <input id="usernamesignup" name="user_name" required="required" type="text" placeholder="Username" data-icon="u"/>
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                    <input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com"/>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                    <input id="passwordsignup" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>

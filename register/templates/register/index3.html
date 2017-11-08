@@ -49,11 +49,11 @@
 				</nav>
 				<nav>
 					<ul id="menu">
-						<li id="menu_active"><a href="{% url 'register:index' %}">Home</a></li>
+						<li><a href="{% url 'register:index' %}">Home</a></li>
 						<li><a href="Mission.html">Progress</a></li>
-						<li><a href="index2.html">Register</a></li>
+						<li id="menu_active"><a href="index2.html">Register</a></li>
 					    <li><a href="Help.html">Portal</a></li>
-					<li><a href="Contact.html">Contact</a></li>
+					    <li><a href="{% url 'register:contact' %}">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -68,7 +68,7 @@
              
 				<nav class="codrops-demos">
 					<span>Click <strong>"Join us"</strong> here</span>
-					<a href="index2.html">User</a>
+					<a href="{% url 'register:index2' %}">Organization</a>
 					<a href="index3.html" class="current-demo">Client</a>
 				</nav>
             </header>
@@ -80,6 +80,7 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="/login" method="post">
+                                {% csrf_token %}
                                 <h1>Log in</h1> 
                                 <p> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
                                     <label for="username" class="uname" data-icon="u" > Your clientname </label>
@@ -94,7 +95,7 @@
 									<label for="loginkeeping">Keep me logged in</label>
 								</p>
                                 <p class="login button"> 
-                                    <input type="submit" value="Login" /> 
+                                    <input type="submit" value="Login" />
 								</p>
                                 <p class="change_link">
 									Not a member yet ?
